@@ -42,10 +42,10 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
 
   if (cardPosition !== prevCardPosition) {
     
-    if(prevCardPosition == maximumIndex && cardPosition == 0){
+    if(prevCardPosition === maximumIndex && cardPosition === 0){
       // Card Moving to back of stack 
       set([{zIndex: 100, x: (width*1.2)}, {zIndex: -100}, start_to(cardPosition), {zIndex: zIndex(cardPosition)}])
-    } else if (prevCardPosition == 0 && cardPosition == maximumIndex) {
+    } else if (prevCardPosition === 0 && cardPosition === maximumIndex) {
       // Card Moving to front of stack
       set([{zIndex: -100, x: -(width*1.2)}, {zIndex: 100}, start_to(cardPosition), {zIndex: zIndex(cardPosition)}])
     } else {
@@ -53,9 +53,9 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
     }
     setPrevCardPosition(cardPosition);
 
-    if (prevCardPosition==cuttoff && cardPosition == cuttoff-1){
+    if (prevCardPosition === cuttoff && cardPosition === cuttoff-1){
       setdataOffset(dataOffset - maximumCards)
-    } else if (prevCardPosition==cuttoff-1 && cardPosition == cuttoff){
+    } else if (prevCardPosition === cuttoff-1 && cardPosition === cuttoff){
       setdataOffset(dataOffset + maximumCards)
     }
   }
@@ -68,7 +68,13 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
   const cardData = cardDataArray[dataIndex]
   var feature_list_jsx = <ul>
     {cardData.features.map((v) => {
-      return <li>{v}</li>
+      if (typeof v == "string"){
+        return <li>{v}</li>
+      }
+      if (v.text && v.link){
+        return <li><a href={v.link} rel="noreferrer" target="_blank">{v.text}</a></li>
+      }
+      return v.text
     })}
   </ul>
 
@@ -88,7 +94,8 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
         <div>
           <h2 className="cardheadingh2" style={{"margin-top": "5%"}}>PROJECT STATUS</h2>
           <hr className="cardheadinghr"/>
-          <h3>{cardData.status}</h3>              
+          <h3>{cardData.status}</h3>
+          <p>{cardData.status_text}</p>              
         </div>
       </div>
       <div className="carddata">
