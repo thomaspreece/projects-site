@@ -67,12 +67,12 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
 
   const cardData = cardDataArray[dataIndex]
   var feature_list_jsx = <ul>
-    {cardData.features.map((v) => {
+    {cardData.features.map((v, i) => {
       if (typeof v == "string"){
-        return <li>{v}</li>
+        return <li key={i} >{v}</li>
       }
       if (v.text && v.link){
-        return <li><a href={v.link} rel="noreferrer" target="_blank">{v.text}</a></li>
+        return <li key={i}><a href={v.link} rel="noreferrer" target="_blank">{v.text}</a></li>
       }
       return v.text
     })}
@@ -92,7 +92,7 @@ function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
       </div>
       <div className="cardstatus"> 
         <div>
-          <h2 className="cardheadingh2" style={{"margin-top": "5%"}}>PROJECT STATUS</h2>
+          <h2 className="cardheadingh2" style={{"marginTop": "5%"}}>PROJECT STATUS</h2>
           <hr className="cardheadinghr"/>
           <h3>{cardData.status}</h3>
           <p>{cardData.status_text}</p>              

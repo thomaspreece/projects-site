@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import Card from './Card';
 
@@ -15,11 +15,12 @@ const statues = {
 }
 
 const cardDataArray = rawCardDataArray.map((i) => {
-  if (!i.image.startsWith("http")){
-    i.image = process.env.PUBLIC_URL + i.image 
+  const shallowCopy = Object.assign({}, i);
+  if (!shallowCopy.image.startsWith("http")){
+    shallowCopy.image = process.env.PUBLIC_URL + shallowCopy.image 
   }
-  i.status = statues[i.status]
-  return i
+  shallowCopy.status = statues[shallowCopy.status]
+  return shallowCopy
 })
 
 function Deck() {
@@ -34,6 +35,15 @@ function Deck() {
         setOffset(offset - 1)
       }
   };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
 
   var deck_jsx = []
   Array.from({ length: maxRenderedCards }, (x, i) => {
@@ -63,8 +73,12 @@ function Deck() {
     return null
   });
 
-  return <div id="cardroot" onKeyDown={handleKeyDown} tabIndex={0}>
-    {deck_jsx}
+  return <div>
+    <button id="prev-button" onClick={() => setOffset(offset - 1)}>◄</button>
+    <div id="cardroot" tabIndex={0}>
+      {deck_jsx}
+    </div>
+    <button id="next-button" onClick={() => setOffset(offset + 1)}>►</button>
   </div>
 }
 
