@@ -1,13 +1,14 @@
 import React, { useState, useRef } from 'react'
 import { useSpring, animated, to } from 'react-spring'
-import './styles.css'
 
 // TODO: Fix issue where cards flip if you move more than one at a time 
 
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+const showDebug = false 
 
-function Card({cardPosition, cardIndex, maximumCards, cardData}) {
-  const cardDataMaximum = cardData.length
+
+function Card({cardPosition, cardIndex, maximumCards, cardDataArray}) {
+  const cardDataArrayMaximum = cardDataArray.length
 
   const cardRef = useRef(null);
   
@@ -59,20 +60,49 @@ function Card({cardPosition, cardIndex, maximumCards, cardData}) {
     }
   }
 
-  var dataIndex = (cardIndex + dataOffset) % cardData.length
+  var dataIndex = (cardIndex + dataOffset) % cardDataArrayMaximum
   if(dataIndex < 0){
-    dataIndex += cardData.length
+    dataIndex += cardDataArrayMaximum
   }
 
-  const cardImage = cardData[dataIndex].image
+  const cardData = cardDataArray[dataIndex]
+  var feature_list_jsx = <ul>
+    {cardData.features.map((v) => {
+      return <li>{v}</li>
+    })}
+  </ul>
 
-  const card_jsx = <animated.div key={cardPosition} style={{ transform: to([props.x, props.y], (x, y) => `translate3d(${x}px,${y}px,0)`) , zIndex: props.zIndex}} cardnumber={dataIndex}>
-    <animated.div ref={cardRef} style={{ transform: to([props.rot, props.scale], trans), backgroundImage: `url(${process.env.PUBLIC_URL}/notebook.png)` }}>
-      Position: {cardPosition} <br/>
-      Index: {cardIndex} <br />
-      Data Index: {dataIndex} <br />
-      Data Offset: {dataOffset} <br />
-      <img src={cardImage} style={{height: "50%"}}/>
+  const debug_jsx = <div className="carddebug">
+    Position: {cardPosition} <br/>
+    Index: {cardIndex} <br />
+    Data Index: {dataIndex} <br />
+    Data Offset: {dataOffset} <br />
+  </div>
+
+  const card_jsx = <animated.div key={cardPosition} className="cardcontainer" style={{ transform: to([props.x, props.y], (x, y) => `translate3d(${x}px,${y}px,0)`) , zIndex: props.zIndex}} cardnumber={dataIndex}>
+    <animated.div ref={cardRef} className="card" style={{ transform: to([props.rot, props.scale], trans), backgroundImage: `url(${process.env.PUBLIC_URL}/notebook.png)` }}>
+      <div className="cardimage" >
+        <div style={{backgroundImage: `url(${cardData.image})`}}></div>
+      </div>
+      <div className="cardstatus"> 
+        <div>
+          <h2 className="cardheadingh2" style={{"margin-top": "5%"}}>PROJECT STATUS</h2>
+          <hr className="cardheadinghr"/>
+          <h3>{cardData.status}</h3>              
+        </div>
+      </div>
+      <div className="carddata">
+        <h2 className="cardheadingh2">PROJECT NAME</h2>
+        <hr className="cardheadinghr"/>
+        <h1>{cardData.name}</h1>
+        <h2 className="cardheadingh2">PROJECT DESCRIPTION</h2>
+        <hr className="cardheadinghr"/>
+        <p>{cardData.description}</p>
+        <h2 className="cardheadingh2">PROJECT FEATURES</h2>
+        <hr className="cardheadinghr"/>
+        {feature_list_jsx}
+      </div>
+      {showDebug ? debug_jsx : null }
     </animated.div>
   </animated.div>
   return card_jsx
