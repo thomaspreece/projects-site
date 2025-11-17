@@ -25,7 +25,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        
+
+      - name: BuildJson
+        run: npm run buildJson
+
       - name: Build
         run: npm run build
 

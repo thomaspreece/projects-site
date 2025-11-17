@@ -1,17 +1,4 @@
-[
-  {
-    "image": "/project_images/Cheddar.jpg",
-    "name": "Automatic Cat Feeder",
-    "description": "Sometimes it feeds your cat. Sometimes the cat is unhappy.",
-    "status": "CANCELLED",
-    "status_text": "Didn't work",
-    "features": [
-      "Archimedes' screw",
-      "Stepper motor",
-      "A tendency to clog"
-    ]
-  },
-  {
+{
     "image": "/project_images/ACM.jpg",
     "name": "Cheese-o-matic",
     "description": "Make cheese at home for more time and money than going to the store!",
@@ -26,4 +13,3 @@
       }
     ]
   }
-]
