@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import Card from './Card';
 
-import rawCardDataArray from '../public/projects.json';
+import rawCardDataArray from './projects.json';
 
 const maxRenderedCards = 8
 
