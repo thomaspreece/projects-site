@@ -50,6 +50,17 @@ jobs:
           git commit -m "Add project - #$ISSUE_NUMBER"
           git push
 
+      - name: BuildJson
+        run: npm run buildJson
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.  
+
       - name: Remove image from issue
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
@@ -60,10 +71,11 @@ jobs:
           awk '/^### Attach image below/ { print; exit } { print }' <<< "$BODY" > "$TMP_FILE"
           gh issue edit "$ISSUE_NUMBER" --body-file "$TMP_FILE"
           rm "$TMP_FILE"
-        
+
       - name: Close Issue
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh issue close --comment "Project Processed" "$ISSUE_NUMBER"
+        run: gh issue close --comment "Project issue processed and added into main" "$ISSUE_NUMBER"
+
           
