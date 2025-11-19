@@ -27,6 +27,22 @@
     ]
   },
   {
+    "description": "A mini 10inch 3D printed rack to hold my homelab",
+    "features": [
+      "Patch panel",
+      "2 Nodes and switches",
+      "Made of PLA - hope it don't get too hot"
+    ],
+    "category": [
+      "Homelab",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "mini-rack.jpg",
+    "name": "Mini Rack"
+  },
+  {
     "description": "Low effort way to show off my projects.",
     "features": [
       "ReactJS & GitHub Pages",
