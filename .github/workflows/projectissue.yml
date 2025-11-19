@@ -1,5 +1,4 @@
-name: Create Project JSON
-
+name: Process Issue and deploy to gh-pages branch
 on:
   issues:
     types: [opened,reopened]
