@@ -1,0 +1,15 @@
+{
+  "description": "Low effort way to show off my projects.",
+  "features": [
+    "ReactJS & GitHub Pages",
+    "Inspired by board game art",
+    "Issues translated into project these cards"
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "projects-site.jpg",
+  "name": "Projects Site"
+}
