@@ -145,7 +145,7 @@ function Card({
     })}
   </ul>
 
-  const debug_jsx = <div className="carddebug">
+  const debug_jsx = <div className="debug">
     cardPosition: {cardPosition} <br/>
     initialCardNumber: {initialCardNumber} <br/>
     cardIndex: {cardIndex} <br />
@@ -156,33 +156,34 @@ function Card({
 
   const card_jsx = <animated.div key={cardPosition} className="cardcontainer" style={{ transform: to([props.x, props.y], (x, y) => `translate3d(${x}px,${y}px,0)`) , zIndex: props.zIndex}} cardnumber={dataIndex}>
     <animated.div ref={cardRef} className="card" style={{ transform: to([props.rot, props.scale], trans), backgroundImage: `url(${process.env.PUBLIC_URL}/notebook.png)` }}>
-      <div className="cardimagetape">
+      <div className="imagetape">
         <div style={{width: tapeOffset.tapeWidth, height: tapeOffset.tapeHeight, position: "relative", zIndex: 1, top: tapeOffset.tapeTop, left: tapeOffset.tapeLeft}}>
           {cardData.image.length > 0 ? <div className="tape-section"></div> : null}
         </div>
       </div>
-      <div className="cardimage" >
+      <div className="image" >
         <div ref={imgDivRef}>
-          {cardData.image.length > 0 ? <img ref={imgRef} alt={cardData.name} className="cardimageimage" src={cardData.image} /> : null}
+          {cardData.image.length > 0 ? <img ref={imgRef} alt={cardData.name} src={cardData.image} /> : null}
         </div>
       </div>
-      <div className="cardstatus"> 
+      <div className="status"> 
         <div>
-          <h2 className="cardheadingh2" style={{"marginTop": "5%"}}>PROJECT STATUS</h2>
-          <hr className="cardheadinghr"/>
-          <h3>{cardData.status}</h3>
-          <p>{cardData.status_text}</p>              
+          <div>
+          <h2 style={{"marginTop": "5%"}}>PROJECT STATUS</h2>
+          <hr />
+          <p>{cardData.status}{cardData.status_text && cardData.status_text.length > 0 ? ` - ${cardData.status_text}` : null}</p>              
+          </div>
         </div>
       </div>
-      <div className="carddata">
-        <h2 className="cardheadingh2">PROJECT NAME</h2>
-        <hr className="cardheadinghr"/>
+      <div className="data">
+        <h2>PROJECT NAME</h2>
+        <hr />
         <h1>{cardData.name}</h1>
-        <h2 className="cardheadingh2">PROJECT DESCRIPTION</h2>
-        <hr className="cardheadinghr"/>
+        <h2>PROJECT DESCRIPTION</h2>
+        <hr />
         <p>{cardData.description}</p>
-        <h2 className="cardheadingh2">PROJECT FEATURES</h2>
-        <hr className="cardheadinghr"/>
+        <h2>PROJECT FEATURES</h2>
+        <hr/>
         {feature_list_jsx}
       </div>
       {showDebug ? debug_jsx : null }

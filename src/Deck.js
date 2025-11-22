@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import './App.css'
+import './Deck.css'
 import Card from './Card';
 
 import rawCardDataArray from './projects.json';
