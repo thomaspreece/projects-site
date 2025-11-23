@@ -90,6 +90,10 @@ function Deck({projectsArray, projectCategories}) {
   
 
   return <div>
+    <button id="back-button" onClick={() => navigate(-1)}>◄ Home</button>
+    {categoryName !== "all" ? <div id="category-title">
+      Category: {categoryName}
+    </div> : null}
     <button id="prev-button" onClick={() => changeOffset(-1)}>◄</button>
     <div id="cardroot" tabIndex={0}>
       {deck_jsx}

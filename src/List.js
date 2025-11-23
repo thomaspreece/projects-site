@@ -9,6 +9,7 @@ function List({projectsArray, projectCategories}) {
   return <div>
     <h1>Categories</h1>
     <ul>
+      <li><Link to={`/category/all`}>All</Link></li>
       {categories_jsx}
     </ul>
     <h1>Projects</h1>
