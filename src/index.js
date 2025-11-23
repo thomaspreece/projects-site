@@ -37,8 +37,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<List projectsArray={projectsArray} projectCategories={projectCategories}/>} />
-        <Route path="category/:categoryName" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>}>
-          <Route path="item/:itemName" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>} /> 
+        <Route path="category/:categoryNameSlug" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>}>
+          <Route path="item/:itemNameSlug" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>} /> 
         </Route>
       </Routes>
     </BrowserRouter>    
