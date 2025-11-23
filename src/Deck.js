@@ -3,64 +3,36 @@ import './Deck.css'
 import Card from './Card';
 
 import { useParams, useNavigate } from "react-router";
-import rawCardDataArray from './projects.json';
+import { nameToSlug} from './helpers';
 
 // Use even number otherwise it breaks
 const maxRenderedCards = 8 
 
-const statues = {
-  "BACKLOG": "💡 Ideation",
-  "STARTED": "⏳ In progress",
-  "COMPLETE": "✅ Complete",
-  "CANCELLED": "⚠️ Cancelled",
-  "DECOMISSIONED": "🚫 Decomissioned",
-}
+function Deck({projectsArray, projectCategories}) {
+  let filteredProjectsArray = projectsArray;
 
-const nameToSlug = (name) => {
-  var returnValue = ""
-  returnValue = name.replaceAll(" ", "_")
-  returnValue = returnValue.toLowerCase()
-  return returnValue
-}
-
-const getCardData = () => {
-  return rawCardDataArray.map((i) => {
-    const shallowCopy = Object.assign({}, i);
-    if (!shallowCopy.image.startsWith("http")){
-      if (shallowCopy.image.length > 0) {
-        shallowCopy.image = process.env.PUBLIC_URL + "/project_images/" + shallowCopy.image 
-      } else {
-        shallowCopy.image = process.env.PUBLIC_URL + "/blank.jpg"
-      }
-    }
-    shallowCopy.status = statues[shallowCopy.status]
-    if(shallowCopy.category) {
-      shallowCopy.category_slugs = shallowCopy.category.map((item) => nameToSlug(item))
-    }
-    return shallowCopy
-  })
-}
-
-function Deck() {
-  let cardDataArray = getCardData()
-
-  let { categoryName, itemName } = useParams();
+  let { categoryNameSlug, itemNameSlug } = useParams();
   let initialOffset = 0;
+  let categoryName = "all";
 
-  if(categoryName) {
-    categoryName = nameToSlug(categoryName)
-    if (categoryName !== "all") {
-      cardDataArray = cardDataArray.filter(
-        (cardData) => cardData["category_slugs"] && cardData["category_slugs"].includes(categoryName)
+  if(categoryNameSlug) {
+    categoryNameSlug = nameToSlug(categoryNameSlug)
+    categoryName = projectCategories.find((i) => nameToSlug(i) === categoryNameSlug)
+    if (categoryName) {
+      filteredProjectsArray = projectsArray.filter(
+        (projectData) => projectData["category"] && projectData["category"].includes(categoryName)
       )
+    } else {
+      categoryName = "all"
+      categoryNameSlug = "all"
     }
   } else {
-    categoryName = "all"
+    categoryNameSlug = "all"
   }
 
-  if(itemName) {
-    itemName = nameToSlug(itemName)
-    const foundIndex = cardDataArray.findIndex((cardData) => nameToSlug(cardData["name"]) === itemName)
+  if(itemNameSlug) {
+    itemNameSlug = nameToSlug(itemNameSlug)
+    const foundIndex = filteredProjectsArray.findIndex((projectData) => nameToSlug(projectData["name"]) === itemNameSlug)
     if(foundIndex > -1){
       initialOffset = foundIndex
     }
@@ -71,14 +43,14 @@ function Deck() {
   const [offset, setOffset] = useState(initialOffset);
 
   const changeOffset = useCallback((diff) => {
-    if(cardDataArray.length === 0) {
+    if(filteredProjectsArray.length === 0) {
       return 
     }
     const newOffset = offset + diff
-    const newItemName = nameToSlug(cardDataArray[newOffset % cardDataArray.length]["name"])
+    const newItemName = nameToSlug(filteredProjectsArray[newOffset % filteredProjectsArray.length]["name"])
     setOffset(offset + diff)
-    navigate(`/category/${categoryName}/item/${newItemName}`, {replace: true});
-  }, [offset, categoryName, navigate, cardDataArray]);
+    navigate(`/category/${categoryNameSlug}/item/${newItemName}`, {replace: true});
+  }, [offset, categoryNameSlug, navigate, filteredProjectsArray]);
 
   const handleKeyDown = useCallback((event) => {
     if(event.key === "ArrowRight"){
@@ -99,12 +71,12 @@ function Deck() {
 
   var deck_jsx = []
 
-  if(cardDataArray.length > 0) {
-    document.title = `${cardDataArray[initialOffset]["name"]} - ${categoryName ? categoryName : "all"} projects`
+  if(filteredProjectsArray.length > 0) {
+    document.title = `${filteredProjectsArray[initialOffset]["name"]} - ${categoryNameSlug ? categoryNameSlug : "all"} projects`
     Array.from({ length: maxRenderedCards }, (x, i) => {
       deck_jsx.push(<Card 
         key={i} 
-        cardDataArray={cardDataArray}
+        cardDataArray={filteredProjectsArray}
         initialCardNumber={i}
         cardOffset={offset}
         maximumCards={maxRenderedCards} 

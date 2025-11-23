@@ -86,17 +86,22 @@ function Card({
   
   // Function to move the sticky tape on the images to correct place
   const handleResize = useCallback(() => {
+    if(!imgDivRef.current || !imgRef.current){
+      return 
+    }
     const top = (imgDivRef.current.offsetHeight - imgRef.current.offsetHeight)/2
     const left = (imgDivRef.current.offsetWidth - imgRef.current.offsetWidth)/2
+    const width = imgRef.current.offsetWidth + 20 // +20 for border on img
+    const height = imgRef.current.offsetHeight
     if (
-      tapeOffset.tapeWidth !== imgRef.current.offsetWidth ||
-      tapeOffset.tapeHeight !== imgRef.current.offsetHeight ||
+      tapeOffset.tapeWidth !== width ||
+      tapeOffset.tapeHeight !== height ||
       tapeOffset.tapeTop !== top ||
       tapeOffset.tapeLeft !== left
     ) {
       setTapeOffset({
-        tapeWidth: imgRef.current.offsetWidth,
-        tapeHeight: imgRef.current.offsetHeight,
+        tapeWidth: width, 
+        tapeHeight: height,
         tapeTop: top,
         tapeLeft: left    
       })
