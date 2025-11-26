@@ -5,17 +5,28 @@
     "description": "Sometimes it feeds your cat. Sometimes the cat is unhappy.",
     "status": "CANCELLED",
     "status_text": "Didn't work",
+    "category": [
+      "Electronics",
+      "3D Printing"
+    ],
     "features": [
       "Archimedes' screw",
       "Stepper motor",
       "A tendency to clog"
-    ]
+    ],
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "image": "cheese-o-matic.jpg",
     "name": "Cheese-o-matic",
     "description": "Make cheese at home for more time and money than going to the store!",
     "status": "COMPLETE",
+    "category": [
+      "Electronics",
+      "3D Printing",
+      "Software Engineering"
+    ],
     "features": [
       "Custom circuitboard",
       "Arduino, RPi & OctoPrint",
@@ -24,7 +35,9 @@
         "text": "Read more",
         "link": "https://github.com/AutomaticCheeseMaker/CheeseMaker"
       }
-    ]
+    ],
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "description": "A mini 10inch 3D printed rack to hold my homelab",
@@ -40,7 +53,9 @@
     "status": "COMPLETE",
     "status_text": "",
     "image": "mini-rack.jpg",
-    "name": "Mini Rack"
+    "name": "Mini Rack",
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "description": "Low effort way to show off my projects.",
@@ -55,7 +70,9 @@
     "status": "COMPLETE",
     "status_text": "",
     "image": "projects-site.jpg",
-    "name": "Projects Site"
+    "name": "Projects Site",
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "description": "A tiny bot that shows messages and our wedding photos",
@@ -70,7 +87,9 @@
     ],
     "status": "COMPLETE",
     "status_text": "",
+    "name": "TomBot",
     "image": "tombot.jpg",
-    "name": "TomBot"
+    "updatedDate": "2025-11-26",
+    "createdDate": "2025-11-20"
   }
 ]
