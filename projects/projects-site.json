@@ -4,7 +4,10 @@
     "ReactJS & GitHub Pages",
     "Inspired by board game art",
     "Issues translated into project these cards",
-    "[Find out more](https://projects.thomaspreece.com/)"
+    {
+      "text": "Find out more",
+      "link": "https://projects.thomaspreece.com/"
+    }
   ],
   "category": [
     "Software Engineering"
