@@ -3,15 +3,16 @@
   "features": [
     "ReactJS & GitHub Pages",
     "Inspired by board game art",
-    "Issues translated into project these cards"
+    "Issues translated into project these cards",
+    "[Find out more](https://projects.thomaspreece.com/)"
   ],
   "category": [
     "Software Engineering"
   ],
   "status": "COMPLETE",
   "status_text": "",
-  "image": "projects-site.jpg",
   "name": "Projects Site",
-  "updatedDate": "2025-11-20",
+  "image": "projects-site.jpg",
+  "updatedDate": "2025-11-26",
   "createdDate": "2025-11-20"
 }
