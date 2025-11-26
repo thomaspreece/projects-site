@@ -3,6 +3,11 @@
     "name": "Cheese-o-matic",
     "description": "Make cheese at home for more time and money than going to the store!",
     "status": "COMPLETE",
+    "category": [
+      "Electronics",
+      "3D Printing",
+      "Software Engineering"
+    ],
     "features": [
       "Custom circuitboard",
       "Arduino, RPi & OctoPrint",
@@ -11,5 +16,7 @@
         "text": "Read more",
         "link": "https://github.com/AutomaticCheeseMaker/CheeseMaker"
       }
-    ]
+    ],
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   }

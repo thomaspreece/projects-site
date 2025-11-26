@@ -4,9 +4,15 @@
     "description": "Sometimes it feeds your cat. Sometimes the cat is unhappy.",
     "status": "CANCELLED",
     "status_text": "Didn't work",    
+    "category": [
+      "Electronics",
+      "3D Printing"
+    ],
     "features": [
       "Archimedes' screw",
       "Stepper motor",
       "A tendency to clog"
-    ]
+    ],
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   }

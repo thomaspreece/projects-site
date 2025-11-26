@@ -11,6 +11,8 @@
   ],
   "status": "COMPLETE",
   "status_text": "",
+  "name": "TomBot",
   "image": "tombot.jpg",
-  "name": "TomBot"
+  "updatedDate": "2025-11-26",
+  "createdDate": "2025-11-20"
 }

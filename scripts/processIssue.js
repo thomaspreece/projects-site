@@ -108,14 +108,16 @@ async function processInput(inputFile) {
 
     // 2. Extract image URL from markdown string
     // Format: ![Alt](URL)
-    const urlRegex = /\bhttps?:\/\/[^\s<>")\]]+/i;
-    const urlMatch = data.image.match(urlRegex);
-    if (urlMatch) {
-        let imageUrl = urlMatch[0];
-        await downloadAndTranscodeImage(imageUrl, "public/project_images/", safeName)
-        image = `${safeName}.jpg`
+    if ("image" in data){
+      const urlRegex = /\bhttps?:\/\/[^\s<>")\]]+/i;
+      const urlMatch = data.image.match(urlRegex);
+      if (urlMatch) {
+          let imageUrl = urlMatch[0];
+          await downloadAndTranscodeImage(imageUrl, "public/project_images/", safeName)
+          image = `${safeName}.jpg`
+      }
     }
-
+    
     // 3. Convert features string into array
     const featuresArray = data.features
         .split("\n")
