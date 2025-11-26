@@ -118,12 +118,24 @@ async function processInput(inputFile) {
       }
     }
     
+    const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/;
     // 3. Convert features string into array
     const featuresArray = data.features
         .split("\n")
         .map(f => f.replace(/^-/, "").trim()) // remove leading dash + space
-        .filter(f => f.length > 0);
+        .filter(f => f.length > 0)
+        .map(f => {
+          const match = f.match(markdownLinkRegex);
 
+          if (match) {
+            return {
+              text: match[1],
+              link: match[2]
+            };
+          }
+
+          return f; 
+        })
 
     const output = {
         ...data,
