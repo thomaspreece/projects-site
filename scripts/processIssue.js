@@ -59,6 +59,18 @@ async function downloadAndTranscodeImage(imageUrl, outputDir, outputName) {
   return outputPath;
 }
 
+function getDateString() {
+
+    let date_time = new Date(Date.now());
+    let date = date_time.getDate();
+    let month = date_time.getMonth() + 1;
+    let year = date_time.getFullYear();
+
+    // prints date & time in YYYY-MM-DD format
+    return year + "-" + month + "-" + date;
+
+}
+
 async function processInput(inputFile) {
     if (!inputFile) {
         throw new Error(`Can not find inputFile: ${inputFile}`);
@@ -75,16 +87,34 @@ async function processInput(inputFile) {
     .replace(/[^a-z0-9-_]+/g, "-") // replace non alphanumerics with hyphens
     .replace(/^-+|-+$/g, "");    // trim starting/ending hyphens
 
+    const outFile = `projects/${safeName}.json`
+
+    let createdDate = getDateString()
+    let image = ""
+
+    try {
+      if (fs.existsSync(outFile)) {
+        let previous_data = JSON.parse(fs.readFileSync(outFile, "utf8"));
+        if ("createdDate" in previous_data){
+          createdDate = previous_data["createdDate"]     
+        }
+        if ("image" in previous_data){
+          image = previous_data["image"]
+        }
+      }
+    } catch (err) {
+
+    }    
+
     // 2. Extract image URL from markdown string
     // Format: ![Alt](URL)
-    let imageUrl = "";
     const urlRegex = /\bhttps?:\/\/[^\s<>")\]]+/i;
     const urlMatch = data.image.match(urlRegex);
     if (urlMatch) {
-        imageUrl = urlMatch[0];
+        let imageUrl = urlMatch[0];
+        await downloadAndTranscodeImage(imageUrl, "public/project_images/", safeName)
+        image = `${safeName}.jpg`
     }
-
-    await downloadAndTranscodeImage(imageUrl, "public/project_images/", safeName)
 
     // 3. Convert features string into array
     const featuresArray = data.features
@@ -92,14 +122,16 @@ async function processInput(inputFile) {
         .map(f => f.replace(/^-/, "").trim()) // remove leading dash + space
         .filter(f => f.length > 0);
 
+
     const output = {
         ...data,
-        image: `${safeName}.jpg`,
+        image: image,
+        updatedDate: getDateString(),
+        createdDate: createdDate,
         features: featuresArray
     };
 
-    const outFile = `projects/${safeName}.json`
-
+    
     fs.writeFileSync(outFile, JSON.stringify(output, null, 2), "utf8");
     console.log(`Wrote processed data to ${outFile}`);
 }

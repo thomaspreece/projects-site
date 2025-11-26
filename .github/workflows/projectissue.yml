@@ -27,6 +27,7 @@ jobs:
         run: |
           CLEAN_TITLE=$(echo "$TITLE" | sed 's/^\[Project\]:\s*//')
           jq --arg title "$CLEAN_TITLE" '. + {name: $title}' "${HOME}/issue-parser-result.json" > ${HOME}/issue.json
+          cat ${HOME}/issue.json
      
       - name: Set up Node.js
         uses: actions/setup-node@v4
