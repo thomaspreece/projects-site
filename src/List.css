@@ -1,0 +1,57 @@
+:root {
+  --text-unit: min(1vh,1.5vw);
+}
+
+#listroot {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#listroot > img {
+    width: 100%;
+    display: inherit;
+}
+   
+#listroot > div {
+    background-repeat: repeat-y;
+    background-size: 100%;
+    padding: 0% 12% 12% 12%;
+    min-height: 100vh;
+}
+
+#listroot > div > h1 {
+    margin-top: 0;
+    font-family: TreasureMap;
+    text-align: center;
+    font-size: calc(6*var(--text-unit));
+}
+
+#listroot > div > h2 {
+    margin-top: 0;
+    font-family: TreasureMap;
+    font-size: calc(4*var(--text-unit));
+}
+
+#listroot > div > ul {
+    font-size: calc(3*var(--text-unit));
+    list-style-type: none;    
+}
+
+#listroot > div > ul > li {
+    margin-top: calc(1*var(--text-unit));
+    margin-bottom: calc(1*var(--text-unit));
+}
+
+
+@font-face {
+  font-family: TreasureMap; 
+  src: url(/public/fonts/Treasuremap-Ea1vj.ttf); 
+}

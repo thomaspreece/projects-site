@@ -15,7 +15,7 @@ const getProjectsArray = () => {
       if (shallowCopy.image.length > 0) {
         shallowCopy.image = process.env.PUBLIC_URL + "/project_images/" + shallowCopy.image 
       } else {
-        shallowCopy.image = process.env.PUBLIC_URL + "/blank.jpg"
+        shallowCopy.image = process.env.PUBLIC_URL + "/images/blank.jpg"
       }
     }
     shallowCopy.status = statues[shallowCopy.status]

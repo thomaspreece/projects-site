@@ -1,21 +1,32 @@
 [
   {
     "image": "",
-    "name": "1- Automatic Cat Feeder",
+    "name": "Automatic Cat Feeder",
     "description": "Sometimes it feeds your cat. Sometimes the cat is unhappy.",
     "status": "CANCELLED",
     "status_text": "Didn't work",
+    "category": [
+      "Electronics",
+      "3D Printing"
+    ],
     "features": [
       "Archimedes' screw",
       "Stepper motor",
       "A tendency to clog"
-    ]
+    ],
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "image": "cheese-o-matic.jpg",
-    "name": "2- Cheese-o-matic",
+    "name": "Cheese-o-matic",
     "description": "Make cheese at home for more time and money than going to the store!",
     "status": "COMPLETE",
+    "category": [
+      "Electronics",
+      "3D Printing",
+      "Software Engineering"
+    ],
     "features": [
       "Custom circuitboard",
       "Arduino, RPi & OctoPrint",
@@ -24,7 +35,9 @@
         "text": "Read more",
         "link": "https://github.com/AutomaticCheeseMaker/CheeseMaker"
       }
-    ]
+    ],
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "description": "A mini 10inch 3D printed rack to hold my homelab",
@@ -40,22 +53,30 @@
     "status": "COMPLETE",
     "status_text": "",
     "image": "mini-rack.jpg",
-    "name": "3- Mini Rack"
+    "name": "Mini Rack",
+    "updatedDate": "2025-11-20",
+    "createdDate": "2025-11-20"
   },
   {
     "description": "Low effort way to show off my projects.",
     "features": [
       "ReactJS & GitHub Pages",
       "Inspired by board game art",
-      "Issues translated into project these cards"
+      "Issues translated into project these cards",
+      {
+        "text": "Find out more",
+        "link": "https://projects.thomaspreece.com/"
+      }
     ],
     "category": [
       "Software Engineering"
     ],
     "status": "COMPLETE",
     "status_text": "",
+    "name": "Projects Site",
     "image": "projects-site.jpg",
-    "name": "4- Projects Site"
+    "updatedDate": "2025-11-26",
+    "createdDate": "2025-11-20"
   },
   {
     "description": "A tiny bot that shows messages and our wedding photos",
@@ -70,71 +91,9 @@
     ],
     "status": "COMPLETE",
     "status_text": "",
+    "name": "TomBot",
     "image": "tombot.jpg",
-    "name": "5- TomBot"
-  },
-  {
-    "description": "A tiny bot that shows messages and our wedding photos",
-    "features": [
-      "Rechargable Battery",
-      "Touchscreen",
-      "Some half baked code"
-    ],
-    "category": [
-      "Electronics",
-      "3D Printing"
-    ],
-    "status": "COMPLETE",
-    "status_text": "",
-    "image": "tombot.jpg",
-    "name": "6- TomBot"
-  },
-  {
-    "description": "A tiny bot that shows messages and our wedding photos",
-    "features": [
-      "Rechargable Battery",
-      "Touchscreen",
-      "Some half baked code"
-    ],
-    "category": [
-      "Electronics",
-      "3D Printing"
-    ],
-    "status": "COMPLETE",
-    "status_text": "",
-    "image": "tombot.jpg",
-    "name": "7- TomBot"
-  },
-  {
-    "description": "A tiny bot that shows messages and our wedding photos",
-    "features": [
-      "Rechargable Battery",
-      "Touchscreen",
-      "Some half baked code"
-    ],
-    "category": [
-      "Electronics",
-      "3D Printing"
-    ],
-    "status": "COMPLETE",
-    "status_text": "",
-    "image": "tombot.jpg",
-    "name": "8- TomBot"
-  },
-  {
-    "description": "A tiny bot that shows messages and our wedding photos",
-    "features": [
-      "Rechargable Battery",
-      "Touchscreen",
-      "Some half baked code"
-    ],
-    "category": [
-      "Electronics",
-      "3D Printing"
-    ],
-    "status": "COMPLETE",
-    "status_text": "",
-    "image": "tombot.jpg",
-    "name": "9- TomBot"
+    "updatedDate": "2025-11-26",
+    "createdDate": "2025-11-20"
   }
 ]

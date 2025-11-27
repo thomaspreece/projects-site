@@ -46,9 +46,13 @@ function Deck({projectsArray, projectCategories}) {
     if(filteredProjectsArray.length === 0) {
       return 
     }
-    const newOffset = offset + diff
-    const newItemName = nameToSlug(filteredProjectsArray[newOffset % filteredProjectsArray.length]["name"])
-    setOffset(offset + diff)
+    let newOffset = offset + diff
+    let arrayIndex = newOffset % filteredProjectsArray.length
+    if (arrayIndex < 0){
+      arrayIndex += filteredProjectsArray.length
+    }
+    const newItemName = nameToSlug(filteredProjectsArray[arrayIndex]["name"])
+    setOffset(newOffset)
     navigate(`/category/${categoryNameSlug}/item/${newItemName}`, {replace: true});
   }, [offset, categoryNameSlug, navigate, filteredProjectsArray]);
 
@@ -90,15 +94,16 @@ function Deck({projectsArray, projectCategories}) {
   
 
   return <div>
-    <button id="back-button" onClick={() => navigate(-1)}>◄ Home</button>
-    {categoryName !== "all" ? <div id="category-title">
-      Category: {categoryName}
-    </div> : null}
+    <button id="back-button" onClick={() => navigate("/")}>☰</button>
+    
     <button id="prev-button" onClick={() => changeOffset(-1)}>◄</button>
     <div id="cardroot" tabIndex={0}>
       {deck_jsx}
     </div>
     <button id="next-button" onClick={() => changeOffset(+1)}>►</button>
+    {categoryName !== "all" ? <div id="category-title">
+      <span>Category: {categoryName}</span>
+    </div> : null}
   </div>
 }
 
