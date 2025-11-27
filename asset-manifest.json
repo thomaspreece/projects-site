@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.28b9bd6a.css",
-    "main.js": "/static/js/main.515295d3.js",
+    "main.css": "/static/css/main.295d8ea8.css",
+    "main.js": "/static/js/main.023246b9.js",
+    "static/media/Treasuremap-Ea1vj.ttf": "/static/media/Treasuremap-Ea1vj.a843991a1c4d2ac3e62d.ttf",
     "index.html": "/index.html",
-    "main.28b9bd6a.css.map": "/static/css/main.28b9bd6a.css.map",
-    "main.515295d3.js.map": "/static/js/main.515295d3.js.map"
+    "main.295d8ea8.css.map": "/static/css/main.295d8ea8.css.map",
+    "main.023246b9.js.map": "/static/js/main.023246b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.28b9bd6a.css",
-    "static/js/main.515295d3.js"
+    "static/css/main.295d8ea8.css",
+    "static/js/main.023246b9.js"
   ]
 }
