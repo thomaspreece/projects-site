@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import { useParams, useNavigate } from "react-router";
+import { useSwipeable } from 'react-swipeable';
+
 import './Deck.css'
 import Card from './Card';
-
-import { useParams, useNavigate } from "react-router";
 import { nameToSlug} from './helpers';
+
+
+
 
 // Use even number otherwise it breaks
 const maxRenderedCards = 8 
@@ -90,12 +94,15 @@ function Deck({projectsArray, projectCategories}) {
     });
   }
 
-  
-  
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => changeOffset(-1),
+    onSwipedRight: () => changeOffset(+1)
+  });
 
   return <div>   
     <button id="prev-button" onClick={() => changeOffset(-1)}>◄</button>
-    <div id="cardroot" tabIndex={0}>
+    <div id="cardroot" tabIndex={0} {...handlers}>
       {deck_jsx}
     </div>
     <button id="next-button" onClick={() => changeOffset(+1)}>►</button>

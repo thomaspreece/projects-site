@@ -3,12 +3,24 @@
   --heading-gray: grey;
 }
 
+#listrootcontainer {
+    max-width: calc(100vw - 8vh);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #listroot {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     opacity: 1;
     animation: fadeIn 1s ease-in-out;
+}
+
+@media (orientation: landscape) {
+    #listroot {
+        max-width: 70vw;
+    }
 }
 
 @keyframes fadeIn {
@@ -26,8 +38,8 @@
     background-size: 100%;
     padding: 4% 12% 12% 12%;
     min-height: 100vh;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 4vh;
+    margin-bottom: 14vh;
     border-radius: 3px;
     border: 10px solid #dadada; 
     -webkit-box-shadow: 0px 0px 10px #777; 

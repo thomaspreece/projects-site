@@ -58,7 +58,7 @@ function List({projectsArray, projectCategories}) {
     
     if(projects_for_status.length > 0){
       projects_jsx.push(<h2 key={`${status}-h2`}>{status.toUpperCase()}</h2>)
-      projects_jsx.push(<hr />)
+      projects_jsx.push(<hr key={`${status}-hr`}/>)
       projects_jsx.push(<ul key={`${status}-ul`}>
         {projects_for_status_jsx}
       </ul>)
@@ -66,11 +66,12 @@ function List({projectsArray, projectCategories}) {
     
   })
 
-  return <div id="listroot">
-    {/* <img alt="" src={`${process.env.PUBLIC_URL}/images/canvas-top.png`}></img> */}
-    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/canvas.png)` }}>
-      <h1>Projects ({categoryName})</h1>
-      {projects_jsx}
+  return <div id="listrootcontainer">
+    <div id="listroot">
+      <div style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/canvas.png)` }}>
+        <h1>Projects ({categoryName})</h1>
+        {projects_jsx}
+      </div>
     </div>
   </div>
 }

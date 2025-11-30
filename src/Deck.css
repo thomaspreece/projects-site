@@ -28,6 +28,7 @@
   #prev-button,
   #next-button {
     width: 20vw;
+    display: none;
   }
 }
 
