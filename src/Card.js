@@ -58,7 +58,7 @@ function Card({
 
   // These two are just helpers, they curate spring data, values that are later being interpolated into css
   const start_to = i => ({ x: 0, y: (i * 4 - height*0.1), scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 + 1000 })
-  const start_from = i => ({ x: 0, rot: 0, scale: 1.5, y: -1000, zIndex: zIndex(i) })
+  const start_from = i => ({ x: 0, rot: 0, scale: 1.5, y: -1500, zIndex: zIndex(i) })
 
   const [props, set] = useSpring(i => ({ ...start_to(cardPosition), from: start_from(cardPosition) })) 
 

@@ -53,7 +53,7 @@ function Deck({projectsArray, projectCategories}) {
     }
     const newItemName = nameToSlug(filteredProjectsArray[arrayIndex]["name"])
     setOffset(newOffset)
-    navigate(`/category/${categoryNameSlug}/item/${newItemName}`, {replace: true});
+    navigate(`/view/${categoryNameSlug}/item/${newItemName}`, {replace: true});
   }, [offset, categoryNameSlug, navigate, filteredProjectsArray]);
 
   const handleKeyDown = useCallback((event) => {
@@ -93,17 +93,12 @@ function Deck({projectsArray, projectCategories}) {
   
   
 
-  return <div>
-    <button id="back-button" onClick={() => navigate("/")}>☰</button>
-    
+  return <div>   
     <button id="prev-button" onClick={() => changeOffset(-1)}>◄</button>
     <div id="cardroot" tabIndex={0}>
       {deck_jsx}
     </div>
     <button id="next-button" onClick={() => changeOffset(+1)}>►</button>
-    {categoryName !== "all" ? <div id="category-title">
-      <span>Category: {categoryName}</span>
-    </div> : null}
   </div>
 }
 

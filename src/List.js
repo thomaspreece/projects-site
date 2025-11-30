@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { nameToSlug, statues } from './helpers';
 import './List.css'
-import { useNavigate } from "react-router";
 
 function compareByKey(a, b, key) {
   if(a[key] < b[key]){
@@ -15,26 +14,27 @@ function compareByKey(a, b, key) {
 }
 
 function List({projectsArray, projectCategories}) {
-  const navigate = useNavigate();
 
-  const projectCountByCategory = projectCategories.map((category) => ({
-    name: category,
-    projectNumber: 0
-  }))
+  let { categoryNameSlug } = useParams();
 
-  projectsArray.forEach((project) => {
-    if("category" in project){
-      project["category"].forEach((category) => {
-        projectCountByCategory[category] += 1
-      })
-    }
-  })
+  let filteredProjectsArray = projectsArray
+
+  if(categoryNameSlug) {
+    categoryNameSlug = nameToSlug(categoryNameSlug)
+    let categoryName = projectCategories.find((i) => nameToSlug(i) === categoryNameSlug)
+    if (categoryName) {
+      filteredProjectsArray = projectsArray.filter(
+        (projectData) => projectData["category"] && projectData["category"].includes(categoryName)
+      )
+    } 
+  } 
+
+
 
   let projects_jsx = []
   Object.values(statues).forEach((status) => {
     
-    
-    let projects_for_status = projectsArray
+    let projects_for_status = filteredProjectsArray
       .filter((project) => {
         return project["status"] === status
       })
@@ -50,12 +50,12 @@ function List({projectsArray, projectCategories}) {
     let projects_for_status_jsx = projects_for_status
       .map(
         (project, i) => <li key={`project-${i}`}>
-          <Link to={`/category/all/item/${nameToSlug(project.name)}`}>{project.name}</Link>
+          <Link to={`/view/${categoryNameSlug}/item/${nameToSlug(project.name)}`}>{project.name} ({project.createdDate.split("-")[0]})</Link>
         </li>)
     
     if(projects_for_status.length > 0){
-      projects_jsx.push(<h2>{status}</h2>)
-      projects_jsx.push(<ul>
+      projects_jsx.push(<h2 key={`${status}-h2`}>{status}</h2>)
+      projects_jsx.push(<ul key={`${status}-ul`}>
         {projects_for_status_jsx}
       </ul>)
     }
@@ -63,7 +63,6 @@ function List({projectsArray, projectCategories}) {
   })
 
   return <div id="listroot">
-    <button id="back-button" onClick={() => navigate(-1)}>🂠</button>
     <img alt="" src={`${process.env.PUBLIC_URL}/images/canvas-top.png`}></img>
     <div style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/canvas-main.png)` }}>
       <h1>Projects</h1>

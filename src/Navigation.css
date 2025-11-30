@@ -1,0 +1,51 @@
+:root {
+  --text-unit: min(1vh,1.5vw);
+}
+
+#menu-button,
+#category-button {
+  position: absolute;
+  width: 10vw;
+  z-index: 2;
+  border: none; 
+  background-color: rgba(0,0,0,0.03);
+  font-size: calc(2*var(--text-unit));
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
+  height: 10vh;
+  line-height: 10vh;
+  top: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#menu-button:hover,
+#category-button:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+#category-button {
+  right: 0;
+  text-align: center;
+}
+
+#category-button span{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+#menu-button {
+  left: 0;
+}
+
+
+@media only screen and (max-device-width: 640px) {
+  #category-button,
+  #menu-button {
+    width: 48vw;
+  }
+}

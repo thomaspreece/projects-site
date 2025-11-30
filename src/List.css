@@ -46,10 +46,20 @@
 }
 
 #listroot > div > ul > li {
-    margin-top: calc(1*var(--text-unit));
-    margin-bottom: calc(1*var(--text-unit));
+    margin-top: calc(1.5*var(--text-unit));
+    margin-bottom: calc(1.5*var(--text-unit));
 }
 
+@media only screen and (max-device-width: 640px) {
+  #listroot {
+    margin-top: 12vh;
+  }
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+}
 
 @font-face {
   font-family: TreasureMap; 

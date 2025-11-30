@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Deck from './Deck';
 import List from './List'
-import { BrowserRouter, Routes, Route  } from "react-router";
+import Navigation from './Navigation';
+import { BrowserRouter, Routes, Route, Navigate  } from "react-router";
 
 import { statues } from './helpers';
 import rawProjectArray from './projects.json';
@@ -36,9 +37,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<List projectsArray={projectsArray} projectCategories={projectCategories}/>} />
-        <Route path="category/:categoryNameSlug" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>}>
-          <Route path="item/:itemNameSlug" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>} /> 
+        <Route element={<Navigation projectCategories={projectCategories} />}>
+          <Route path="/" element={<Navigate to='/list/all' replace />} />
+          <Route path="/list/:categoryNameSlug" element={<List projectsArray={projectsArray} projectCategories={projectCategories}/>} />
+          <Route path="/view/:categoryNameSlug" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>}>
+            <Route path="item/:itemNameSlug" element={<Deck projectsArray={projectsArray} projectCategories={projectCategories}/>} /> 
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>    
