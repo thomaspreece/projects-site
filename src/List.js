@@ -16,16 +16,19 @@ function compareByKey(a, b, key) {
 function List({projectsArray, projectCategories}) {
 
   let { categoryNameSlug } = useParams();
+  let categoryName = "All";
 
   let filteredProjectsArray = projectsArray
 
   if(categoryNameSlug) {
     categoryNameSlug = nameToSlug(categoryNameSlug)
-    let categoryName = projectCategories.find((i) => nameToSlug(i) === categoryNameSlug)
+    categoryName = projectCategories.find((i) => nameToSlug(i) === categoryNameSlug)
     if (categoryName) {
       filteredProjectsArray = projectsArray.filter(
         (projectData) => projectData["category"] && projectData["category"].includes(categoryName)
       )
+    } else {
+      categoryName = "All"
     } 
   } 
 
@@ -54,7 +57,8 @@ function List({projectsArray, projectCategories}) {
         </li>)
     
     if(projects_for_status.length > 0){
-      projects_jsx.push(<h2 key={`${status}-h2`}>{status}</h2>)
+      projects_jsx.push(<h2 key={`${status}-h2`}>{status.toUpperCase()}</h2>)
+      projects_jsx.push(<hr />)
       projects_jsx.push(<ul key={`${status}-ul`}>
         {projects_for_status_jsx}
       </ul>)
@@ -63,9 +67,9 @@ function List({projectsArray, projectCategories}) {
   })
 
   return <div id="listroot">
-    <img alt="" src={`${process.env.PUBLIC_URL}/images/canvas-top.png`}></img>
-    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/canvas-main.png)` }}>
-      <h1>Projects</h1>
+    {/* <img alt="" src={`${process.env.PUBLIC_URL}/images/canvas-top.png`}></img> */}
+    <div style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/canvas.png)` }}>
+      <h1>Projects ({categoryName})</h1>
       {projects_jsx}
     </div>
   </div>

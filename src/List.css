@@ -1,5 +1,6 @@
 :root {
   --text-unit: min(1vh,1.5vw);
+  --heading-gray: grey;
 }
 
 #listroot {
@@ -23,21 +24,31 @@
 #listroot > div {
     background-repeat: repeat-y;
     background-size: 100%;
-    padding: 0% 12% 12% 12%;
+    padding: 4% 12% 12% 12%;
     min-height: 100vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 3px;
+    border: 10px solid #dadada; 
+    -webkit-box-shadow: 0px 0px 10px #777; 
+    -moz-box-shadow: 0px 0px 10px #777; 
+    box-shadow: 0px 0px 10px #777;
 }
 
 #listroot > div > h1 {
-    margin-top: 0;
-    font-family: TreasureMap;
+    /* font-family: ListFont; */
     text-align: center;
-    font-size: calc(6*var(--text-unit));
+    font-size: calc(5*var(--text-unit));
 }
 
 #listroot > div > h2 {
     margin-top: 0;
-    font-family: TreasureMap;
-    font-size: calc(4*var(--text-unit));
+    /* font-family: ListFont; */
+    font-size: calc(3*var(--text-unit));
+}
+
+#listroot > div > hr {
+    color: var(--heading-gray);
 }
 
 #listroot > div > ul {
@@ -46,8 +57,8 @@
 }
 
 #listroot > div > ul > li {
-    margin-top: calc(1.5*var(--text-unit));
-    margin-bottom: calc(1.5*var(--text-unit));
+    margin-top: calc(1.8*var(--text-unit));
+    margin-bottom: calc(1.8*var(--text-unit));
 }
 
 @media only screen and (max-device-width: 640px) {
@@ -62,6 +73,6 @@ a {
 }
 
 @font-face {
-  font-family: TreasureMap; 
-  src: url(/public/fonts/Treasuremap-Ea1vj.ttf); 
+  font-family: ListFont; 
+  src: url(/public/fonts/KoplokFreeTrial-JRrVj.otf); 
 }
