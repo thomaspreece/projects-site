@@ -287,10 +287,10 @@
       "Electronics",
       "Software Engineering"
     ],
-    "status": "COMPLETE",
-    "status_text": "",
-    "image": "supereasy-arduino-for-scratch.jpg",
+    "status": "DECOMISSIONED",
+    "status_text": "Useful at the time but superseded by other easier to use software",
     "name": "SuperEasy Arduino For Scratch",
+    "image": "supereasy-arduino-for-scratch.jpg",
     "updatedDate": "2025-12-1",
     "createdDate": "2025-12-1"
   },
