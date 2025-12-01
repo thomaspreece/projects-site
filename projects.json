@@ -57,6 +57,26 @@
     "createdDate": "2025-12-1"
   },
   {
+    "description": "Repairing a badly corroded circuit board.",
+    "features": [
+      "Replaced capacitors and cleaned",
+      "Makes noise again",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2015/02/18/digital-piano-repair/"
+      }
+    ],
+    "category": [
+      "Electronics"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "digital-piano-repair.jpg",
+    "name": "Digital Piano Repair",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "Retro-fitting factory equipment to make it smarter",
     "features": [
       "Arduino",
