@@ -152,6 +152,27 @@
     "createdDate": "2025-12-1"
   },
   {
+    "description": "Test what network requests an application makes",
+    "features": [
+      "Performs MITM on HTTPS",
+      "Captures DNS requests",
+      "Returning either fake response data or real server data",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2022/10/01/proxmox-intercepting-network-traffic-tooling-setup-guide/"
+      }
+    ],
+    "category": [
+      "Homelab"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "intercepting-network-traffic.jpg",
+    "name": "Intercepting Network Traffic",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "All the flexibility of Docker with even more complexity",
     "features": [
       "Microk8s",
