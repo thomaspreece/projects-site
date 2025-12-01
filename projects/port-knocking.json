@@ -1,0 +1,21 @@
+{
+  "description": "Protect your network with security obscurity!",
+  "features": [
+    "Classic and Fwknop Port Knocking Techniques",
+    "Hooks into MikroTik Router",
+    {
+      "text": "GitHub Repo",
+      "link": "https://github.com/thomaspreece/mikrotik-fwknop-pi"
+    }
+  ],
+  "category": [
+    "Homelab",
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "port-knocking.jpg",
+  "name": "Port Knocking",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
