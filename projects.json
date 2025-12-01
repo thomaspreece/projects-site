@@ -112,6 +112,27 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "An extensive product for managing your game collection. Looks cool in an arcade cabinet.",
+    "features": [
+      "Custom Website in PHP",
+      "Software built on BlitzMax Language",
+      "People actually paid money for it",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2015/02/19/photon-gamemanager/"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "photon-gamemanager.jpg",
+    "name": "Photon GameManager",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "Low effort way to show off my projects.",
     "features": [
       "ReactJS & GitHub Pages",
