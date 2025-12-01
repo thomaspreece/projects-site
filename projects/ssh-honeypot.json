@@ -1,0 +1,20 @@
+{
+  "description": "Exploring what happens if you put something insecure on the internet.",
+  "features": [
+    "Cowrie Honeypot",
+    "Lots of SSH connections",
+    {
+      "text": "Read more",
+      "link": "https://thomaspreece.com/2021/05/16/project-honeypot/"
+    }
+  ],
+  "category": [
+    "Information Security"
+  ],
+  "status": "DECOMISSIONED",
+  "status_text": "Ran for a few weeks",
+  "image": "ssh-honeypot.jpg",
+  "name": "SSH Honeypot",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
