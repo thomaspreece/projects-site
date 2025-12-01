@@ -149,5 +149,21 @@
     "image": "tombot.jpg",
     "updatedDate": "2025-11-26",
     "createdDate": "2025-11-20"
+  },
+  {
+    "description": "A super basic website but I got a pint out of it so not all bad.",
+    "features": [
+      "Custom styling",
+      "Basic PHP"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "university-elections-website.jpg",
+    "name": "University Elections Website",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
   }
 ]
