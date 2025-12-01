@@ -213,6 +213,23 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "Using Home Assistant to connect up all my IoT devices",
+    "features": [
+      "Controls Heating, Lights, Blinds and other devices",
+      "Easy Integration",
+      "Wife Approved"
+    ],
+    "category": [
+      "Homelab"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "smart-home.jpg",
+    "name": "Smart Home",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "Hook an Arduino up to Scratch V2 in a super simply way.",
     "features": [
       "Simple to use UI",
