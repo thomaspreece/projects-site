@@ -1,0 +1,17 @@
+{
+  "description": "Retro-fitting factory equipment to make it smarter",
+  "features": [
+    "Arduino",
+    "Raspberry Pi Controller",
+    "A lot of tape and trial and error"
+  ],
+  "category": [
+    "Electronics"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "factory-floor-sensors.jpg",
+  "name": "Factory Floor Sensors",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
