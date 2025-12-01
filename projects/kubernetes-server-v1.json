@@ -1,0 +1,21 @@
+{
+  "description": "All the flexibility of Docker with even more complexity",
+  "features": [
+    "Microk8s",
+    "Runs: PiHole, Home Assistant, Tandoor and other software",
+    "Deployed from GitHub",
+    {
+      "text": "Read more",
+      "link": "https://thomaspreece.com/2021/09/30/project-kubernetes-homelab/"
+    }
+  ],
+  "category": [
+    "Homelab"
+  ],
+  "status": "DECOMISSIONED",
+  "status_text": "Upgraded to v2",
+  "image": "kubernetes-server-v1.jpg",
+  "name": "Kubernetes Server v1",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
