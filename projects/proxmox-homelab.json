@@ -1,0 +1,21 @@
+{
+  "description": "A selection of networks and VMs for everything from malware analysis to mobile forensics",
+  "features": [
+    "Proxmox Hypervisor",
+    "PfSense and virtual networking",
+    "Selection of VMs",
+    {
+      "text": "Read more",
+      "link": "https://thomaspreece.com/2022/08/01/project-proxmox-homelab/"
+    }
+  ],
+  "category": [
+    "Homelab"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "proxmox-homelab.jpg",
+  "name": "Proxmox HomeLab",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
