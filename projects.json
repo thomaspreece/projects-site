@@ -193,6 +193,24 @@
     "createdDate": "2025-12-1"
   },
   {
+    "description": "Control access to your data like never before.",
+    "features": [
+      "Solid Data Pod",
+      "Reverse Engineering",
+      "Improving prototype security"
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "personal-data-stores.jpg",
+    "name": "Personal Data Stores",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "An extensive product for managing your game collection. Looks cool in an arcade cabinet.",
     "features": [
       "Custom Website in PHP",
