@@ -176,6 +176,23 @@
     "createdDate": "2025-12-1"
   },
   {
+    "description": "Free indie games are really fun and free. Find them on this site.",
+    "features": [
+      "PHP",
+      "Points based system for user submitted content",
+      "Extensive collection of titles"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "Maintainence cost got too large",
+    "image": "the-free-games-database.jpg",
+    "name": "The Free Games Database",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "A tiny bot that shows messages and our wedding photos",
     "features": [
       "Rechargable Battery",
