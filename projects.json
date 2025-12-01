@@ -150,6 +150,29 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "Leveraging ESP32 Audio development boards to synchronise audio across multiple speakers",
+    "features": [
+      "Logitech Media Server (LMS)",
+      "squeezelite-esp32 & ESP32-1AS",
+      "3D printed case",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2019/12/10/project-multi-room-synchronised-audio/"
+      }
+    ],
+    "category": [
+      "Electronics",
+      "Homelab",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "multi-room-synchronised-audio.jpg",
+    "name": "Multi-room Synchronised Audio",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "An extensive product for managing your game collection. Looks cool in an arcade cabinet.",
     "features": [
       "Custom Website in PHP",
