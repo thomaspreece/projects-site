@@ -163,12 +163,13 @@
       }
     ],
     "category": [
-      "Homelab"
+      "Homelab",
+      "Information Security"
     ],
     "status": "COMPLETE",
     "status_text": "",
-    "image": "intercepting-network-traffic.jpg",
     "name": "Intercepting Network Traffic",
+    "image": "intercepting-network-traffic.jpg",
     "updatedDate": "2025-12-1",
     "createdDate": "2025-12-1"
   },
