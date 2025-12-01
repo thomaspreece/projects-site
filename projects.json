@@ -57,7 +57,7 @@
     "createdDate": "2025-12-1"
   },
   {
-    "description": "Repairing a badly corroded circuit board.",
+    "description": "Repairing a badly corroded circuit board so I can continue to annoy everyone with my poor piano skills.",
     "features": [
       "Replaced capacitors and cleaned",
       "Makes noise again",
@@ -71,8 +71,8 @@
     ],
     "status": "COMPLETE",
     "status_text": "",
-    "image": "digital-piano-repair.jpg",
     "name": "Digital Piano Repair",
+    "image": "digital-piano-repair.jpg",
     "updatedDate": "2025-12-1",
     "createdDate": "2025-12-1"
   },
