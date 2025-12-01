@@ -1,0 +1,21 @@
+{
+  "description": "Repurposed an old Kindle to help turn lights on and off.",
+  "features": [
+    "Hacked Kindle Paperwhite",
+    "Low Power",
+    "Very limited Kindle browser",
+    {
+      "text": "Read more",
+      "link": "https://thomaspreece.com/2019/12/10/home-assistant-kindle-dashboard/"
+    }
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "DECOMISSIONED",
+  "status_text": "Kindle Paperwhite just too limited to be smooth interface",
+  "image": "eink-home-assistant-dashboard.jpg",
+  "name": "eInk Home Assistant Dashboard",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
