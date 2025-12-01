@@ -1,0 +1,20 @@
+{
+  "description": "NodeJS based framework of tools to make adaptive stories",
+  "features": [
+    "NodeJS & React",
+    "Used to create BBC Click 1000th episode",
+    {
+      "text": "Read more",
+      "link": "https://thomaspreece.com/2020/09/26/project-storykit/"
+    }
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "adaptive-storytelling.jpg",
+  "name": "Adaptive Storytelling",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
