@@ -338,10 +338,10 @@
     "category": [
       "Software Engineering"
     ],
-    "status": "COMPLETE",
+    "status": "DECOMISSIONED",
     "status_text": "",
-    "image": "university-elections-website.jpg",
     "name": "University Elections Website",
+    "image": "university-elections-website.jpg",
     "updatedDate": "2025-12-1",
     "createdDate": "2025-12-1"
   },
