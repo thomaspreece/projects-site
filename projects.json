@@ -40,6 +40,23 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "Play chess over the internet with a physical chess board and pieces that are tracked via NFC.",
+    "features": [
+      "NFC Readers",
+      "Arduino Yun",
+      "LED Guidance"
+    ],
+    "category": [
+      "Electronics"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "digital-nfc-chessboard.jpg",
+    "name": "Digital NFC Chessboard",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "A mini 10inch 3D printed rack to hold my homelab",
     "features": [
       "Patch panel",
