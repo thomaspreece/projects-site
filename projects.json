@@ -154,6 +154,28 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "Hook an Arduino up to Scratch V2 in a super simply way.",
+    "features": [
+      "Simple to use UI",
+      "Used by Children",
+      "Teaching resources",
+      {
+        "text": "Read more",
+        "link": "https://thomaspreece.com/2015/02/19/supereasy-a4s/"
+      }
+    ],
+    "category": [
+      "Electronics",
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "supereasy-arduino-for-scratch.jpg",
+    "name": "SuperEasy Arduino For Scratch",
+    "updatedDate": "2025-12-1",
+    "createdDate": "2025-12-1"
+  },
+  {
     "description": "A tiny bot that shows messages and our wedding photos",
     "features": [
       "Rechargable Battery",
