@@ -1,0 +1,17 @@
+{
+  "description": "A printer for tinkering. Sometimes it worked.",
+  "features": [
+    "Extensive upgrades",
+    "Learnt CAD",
+    "OctoPrint"
+  ],
+  "category": [
+    "3D Printing"
+  ],
+  "status": "DECOMISSIONED",
+  "status_text": "Times move on and better printers have come along",
+  "image": "ender-3.jpg",
+  "name": "Ender 3",
+  "updatedDate": "2025-12-1",
+  "createdDate": "2025-12-1"
+}
