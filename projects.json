@@ -38,6 +38,26 @@
     "createdDate": "2022-04-01"
   },
   {
+    "description": "An updated Backdoor & Breaches to include an AWS focused deck",
+    "features": [
+      "AWS Incident Scenarios",
+      "Fun",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/B-B-Shuffle"
+      }
+    ],
+    "category": [
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "backdoor-breaches-aws-deck.jpg",
+    "name": "Backdoor & Breaches AWS Deck",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
     "image": "cheese-o-matic.jpg",
     "name": "Cheese-o-matic",
     "description": "Make cheese at home for more time and money than going to the store!",
