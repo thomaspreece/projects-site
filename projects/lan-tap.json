@@ -1,0 +1,20 @@
+{
+  "description": "Modified Throwing Star LAN Tap",
+  "features": [
+    "Listen on 100Mbps connections",
+    "Throw it at people",
+    {
+      "text": "View design",
+      "link": "https://github.com/thomaspreece/throwing-star-lan-tap"
+    }
+  ],
+  "category": [
+    "Electronics"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "lan-tap.jpg",
+  "name": "LAN Tap",
+  "updatedDate": "2025-12-8",
+  "createdDate": "2025-12-8"
+}
