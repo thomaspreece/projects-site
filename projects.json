@@ -152,6 +152,27 @@
     "createdDate": "2015-02-18"
   },
   {
+    "description": "Bruteforce test the permissions on a GitHub App, OAuth App or PAT.",
+    "features": [
+      "Tests permissions one by one",
+      "Supports GitHub App tokens",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/GitHub-Token-Tester"
+      }
+    ],
+    "category": [
+      "Software Engineering",
+      "Information Security"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "github-token-tester.jpg",
+    "name": "GitHub Token Tester",
+    "updatedDate": "2025-12-8",
+    "createdDate": "2025-12-8"
+  },
+  {
     "description": "Test what network requests an application makes",
     "features": [
       "Performs MITM on HTTPS",
