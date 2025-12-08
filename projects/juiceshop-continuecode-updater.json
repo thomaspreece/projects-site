@@ -1,0 +1,20 @@
+{
+  "description": "Save your progress in JuiceShop and port to a newer running version",
+  "features": [
+    "Parses the ContinueCode Cookie",
+    "Supports all JuiceShop versions",
+    {
+      "text": "Read more",
+      "link": "https://github.com/thomaspreece/juiceshop_update_continuecode"
+    }
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "juiceshop-continuecode-updater.jpg",
+  "name": "JuiceShop ContinueCode Updater",
+  "updatedDate": "2025-12-8",
+  "createdDate": "2025-12-8"
+}
