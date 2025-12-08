@@ -1,0 +1,20 @@
+{
+  "description": "Parse your ebook recipes straight into Tandoor Recipe Manager",
+  "features": [
+    "Flexible parsing specification",
+    "Supports Tandoor",
+    {
+      "text": "Read more",
+      "link": "https://github.com/thomaspreece/recipe-ebook-parser"
+    }
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "parse-recipe-ebook-for-tandoor.jpg",
+  "name": "Parse Recipe Ebook for Tandoor",
+  "updatedDate": "2025-12-8",
+  "createdDate": "2025-12-8"
+}
