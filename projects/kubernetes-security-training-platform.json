@@ -1,0 +1,21 @@
+{
+  "description": "CTFD, Security Shepherd and Secure Coding Dojo all in one.",
+  "features": [
+    "Microk8s",
+    "KeyCloak integration",
+    {
+      "text": "Read more",
+      "link": "https://github.com/thomaspreece/microk8s-training-platform"
+    }
+  ],
+  "category": [
+    "Software Engineering",
+    "Information Security"
+  ],
+  "status": "DECOMISSIONED",
+  "status_text": "Ran during 2020",
+  "image": "kubernetes-security-training-platform.jpg",
+  "name": "Kubernetes Security Training Platform",
+  "updatedDate": "2025-12-9",
+  "createdDate": "2025-12-9"
+}
