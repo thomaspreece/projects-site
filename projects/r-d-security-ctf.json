@@ -1,0 +1,22 @@
+{
+  "description": "A fun security CTF with a collection of challenges",
+  "features": [
+    "CTFD",
+    "Kubernetes",
+    "Custom challenges",
+    {
+      "text": "Read more ",
+      "link": "https://github.com/thomaspreece/rd-ctf-2020"
+    }
+  ],
+  "category": [
+    "Software Engineering",
+    "Information Security"
+  ],
+  "status": "DECOMISSIONED",
+  "status_text": "Ran during 2020 only",
+  "image": "r-d-security-ctf.jpg",
+  "name": "R&D Security CTF",
+  "updatedDate": "2025-12-9",
+  "createdDate": "2025-12-9"
+}
