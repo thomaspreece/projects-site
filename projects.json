@@ -255,6 +255,26 @@
     "createdDate": "2025-12-8"
   },
   {
+    "description": "A Kodi plugin to experiment into what iPlayer may look like with a complete back-catalogue",
+    "features": [
+      "Kodi Plugin",
+      "TVDB Support",
+      {
+        "text": "Read more",
+        "link": "https://github.com/thomaspreece/kodi_redux_plugin"
+      }
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "DECOMISSIONED",
+    "status_text": "",
+    "image": "kodi-plugin.jpg",
+    "name": "Kodi Plugin",
+    "updatedDate": "2025-12-9",
+    "createdDate": "2025-12-9"
+  },
+  {
     "description": "All the flexibility of Docker with even more complexity",
     "features": [
       "Microk8s",
