@@ -1,0 +1,21 @@
+{
+  "description": "Research into the security of AWS CodeConnections via their use in several different AWS Services",
+  "features": [
+    "AWS CodeBuild, CodePipeline",
+    "Security issues found",
+    {
+      "text": "Read more",
+      "link": "https://thomaspreece.com/2025/12/04/project-aws-codeconnections/"
+    }
+  ],
+  "category": [
+    "Software Engineering",
+    "Information Security"
+  ],
+  "status": "STARTED",
+  "status_text": "",
+  "image": "aws-codeconnections-research.jpg",
+  "name": "AWS CodeConnections Research",
+  "updatedDate": "2025-12-9",
+  "createdDate": "2025-12-9"
+}
