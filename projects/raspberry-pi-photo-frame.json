@@ -1,0 +1,17 @@
+{
+  "description": "Shows photos and other images",
+  "features": [
+    "Shows Wedding Photos",
+    "Integrates with Home Assistant",
+    "Raspberry Pi"
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "raspberry-pi-photo-frame.jpg",
+  "name": "Raspberry Pi Photo Frame",
+  "updatedDate": "2025-12-13",
+  "createdDate": "2025-12-13"
+}
