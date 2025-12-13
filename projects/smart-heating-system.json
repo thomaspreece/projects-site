@@ -1,0 +1,17 @@
+{
+  "description": "Heat each room separately with this smart system.",
+  "features": [
+    "Drayton Wiser",
+    "Home Assistant Integration",
+    "Schedules per room"
+  ],
+  "category": [
+    "Software Engineering"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "smart-heating-system.jpg",
+  "name": "Smart Heating System",
+  "updatedDate": "2025-12-13",
+  "createdDate": "2025-12-13"
+}
