@@ -408,6 +408,23 @@
     "createdDate": "2025-12-8"
   },
   {
+    "description": "The best of all chutneys",
+    "features": [
+      "Tom head stickers",
+      "Huge batch size",
+      "Tasty"
+    ],
+    "category": [
+      "Crafts"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "mango-chutney.jpg",
+    "name": "Mango Chutney",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "A mini 10inch 3D printed rack to hold my homelab",
     "features": [
       "Patch panel",
