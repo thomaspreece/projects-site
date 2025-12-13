@@ -788,6 +788,25 @@
     "createdDate": "2012-06-17"
   },
   {
+    "description": "Lock chocolate away for a set time",
+    "features": [
+      "Servo lock and Arduino controller",
+      "3D printed case",
+      "Keypad and LCD for interface"
+    ],
+    "category": [
+      "Electronics",
+      "Software Engineering",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "timer-box.jpg",
+    "name": "Timer Box",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "A tiny bot that shows messages and our wedding photos",
     "features": [
       "Rechargable Battery",
