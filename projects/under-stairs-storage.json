@@ -1,0 +1,16 @@
+{
+  "description": "Simple draw for shoes",
+  "features": [
+    "Hinged",
+    "Painted Plywood"
+  ],
+  "category": [
+    "Woodworking"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "under-stairs-storage.jpg",
+  "name": "Under stairs storage",
+  "updatedDate": "2025-12-13",
+  "createdDate": "2025-12-13"
+}
