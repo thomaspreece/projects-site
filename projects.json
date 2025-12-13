@@ -284,6 +284,24 @@
     "createdDate": "2025-12-8"
   },
   {
+    "description": "Handmade from a slab of wood. Custom velvet lined inserts.",
+    "features": [
+      "Custom made",
+      "3D printed inserts lined with velvet"
+    ],
+    "category": [
+      "Woodworking",
+      "Crafts",
+      "3D Printing"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "homemade-jewellery-box.jpg",
+    "name": "Homemade Jewellery Box",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "Test what network requests an application makes",
     "features": [
       "Performs MITM on HTTPS",
