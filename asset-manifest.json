@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.33c15e93.css",
-    "main.js": "/static/js/main.97f53f4f.js",
+    "main.js": "/static/js/main.e0ddbbb4.js",
     "static/media/KoplokFreeTrial-JRrVj.otf": "/static/media/KoplokFreeTrial-JRrVj.54d4636ae7f3ed85492b.otf",
     "index.html": "/index.html",
     "main.33c15e93.css.map": "/static/css/main.33c15e93.css.map",
-    "main.97f53f4f.js.map": "/static/js/main.97f53f4f.js.map"
+    "main.e0ddbbb4.js.map": "/static/js/main.e0ddbbb4.js.map"
   },
   "entrypoints": [
     "static/css/main.33c15e93.css",
-    "static/js/main.97f53f4f.js"
+    "static/js/main.e0ddbbb4.js"
   ]
 }

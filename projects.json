@@ -609,6 +609,23 @@
     "createdDate": "2025-12-13"
   },
   {
+    "description": "Heat each room separately with this smart system.",
+    "features": [
+      "Drayton Wiser",
+      "Home Assistant Integration",
+      "Schedules per room"
+    ],
+    "category": [
+      "Software Engineering"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "smart-heating-system.jpg",
+    "name": "Smart Heating System",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "Using Home Assistant to connect up all my IoT devices",
     "features": [
       "Controls Heating, Lights, Blinds and other devices",
