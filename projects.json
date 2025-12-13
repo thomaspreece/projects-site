@@ -703,6 +703,22 @@
     "createdDate": "2025-11-20"
   },
   {
+    "description": "Simple draw for shoes",
+    "features": [
+      "Hinged",
+      "Painted Plywood"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "under-stairs-storage.jpg",
+    "name": "Under stairs storage",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "A super basic website but I got a pint out of it so not all bad.",
     "features": [
       "Custom styling",
