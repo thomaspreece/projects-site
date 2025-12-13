@@ -1,0 +1,16 @@
+{
+  "description": "Kitchen organisation at its finest",
+  "features": [
+    "Custom Labels",
+    "Range of spices"
+  ],
+  "category": [
+    "Crafts"
+  ],
+  "status": "COMPLETE",
+  "status_text": "",
+  "image": "spice-draw.jpg",
+  "name": "Spice Draw",
+  "updatedDate": "2025-12-13",
+  "createdDate": "2025-12-13"
+}
