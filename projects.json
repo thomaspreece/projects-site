@@ -138,6 +138,22 @@
     "createdDate": "2014-11-18"
   },
   {
+    "description": "Custom fitted dresser table",
+    "features": [
+      "Recycled Pine Floorboards",
+      "Fits neatly in unusable corner"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "dresser-table.jpg",
+    "name": "Dresser Table",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "Repurposed an old Kindle to help turn lights on and off.",
     "features": [
       "Hacked Kindle Paperwhite",
