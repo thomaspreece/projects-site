@@ -751,6 +751,22 @@
     "createdDate": "2014-02-21"
   },
   {
+    "description": "Wife approved outdoor vegetable beds",
+    "features": [
+      "Recycled wood",
+      "Carrots and parsnips"
+    ],
+    "category": [
+      "Woodworking"
+    ],
+    "status": "COMPLETE",
+    "status_text": "",
+    "image": "vegetable-beds.jpg",
+    "name": "Vegetable Beds",
+    "updatedDate": "2025-12-13",
+    "createdDate": "2025-12-13"
+  },
+  {
     "description": "Archive your website before it falls into the internet abyss.",
     "features": [
       "WARC Format",
